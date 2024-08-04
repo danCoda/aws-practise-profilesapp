@@ -16,8 +16,8 @@ import outputs from "../amplify_outputs.json";
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
 
-Amplify.configure(outputs);
-const client = generateClient({
+Amplify.configure(outputs); // configuring the Amplify library with the client configuration file (amplify_outputs.json).
+const client = generateClient({ // generates a data client using the generateClient() function. The app will use the data client to get the user’s profile data. 
   authMode: "userPool",
 });
 
